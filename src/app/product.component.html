@@ -1,0 +1,59 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+
+
+<div class="main">
+
+
+
+
+ 
+    <div class="container"> 
+      <span> Active Items</span>
+      
+    <a  [routerLink] = "['/Newitem']">  <button type="button" class="btn btn-success" style="margin-left: 70%;" >+  New</button></a>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Itemname</th>
+          <th>InventoryGroup</th>
+          <th>Salecategory</th>
+          <th>Item Type</th>
+          <th>Edit/Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+          <!-- let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow" -->
+        <tr *ngFor="let items of allItemDetails" >
+          <td>{{items.itemName}}</td>
+          <td>{{items.invgrp}}</td>
+          <td>{{items.category}}</td>
+          <td>{{items.itemType}}</td>
+          <td><a  [routerLink] = "['/Edititem']"><button type="button" class="btn btn-info btn-lg" >
+              <span class="glyphicon glyphicon-pencil" (click)="setClickedRow(items)"> </span>
+          </button></a>
+         
+          <button type="button" class="btn btn-info btn-lg" (click)="deleteRow(items)">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+          
+        
+        </td>
+           
+        </tr>
+        
+        
+        
+      </tbody> 
+    </table>
+    </div>
+    {{message}}
+  </div>
+  
+   

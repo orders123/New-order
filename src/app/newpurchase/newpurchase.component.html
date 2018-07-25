@@ -1,0 +1,110 @@
+<div class="main">
+  <div class="container" > 
+    <div class="col-sm-12 col-md-12 col-xs-12;margin-left:10px;" > 
+            <strong>New Purchase</strong> </div>
+
+
+ <form  [formGroup]="vendorForm" (ngSubmit)="onSubmit()"> 
+  <div class="row"  style="background:#f4f7f8;height:570px;width:100%;margin-left:20px;overflow-y: auto">
+   
+    
+   
+      <div class="col-sm-12 col-md-12 col-xs-12;margin-left:10px;" > 
+                  <div class="row" style="background-color: #FBFAFA;"> 
+                      <div class= "col-sm-6 col-md-6 col-xs-12">
+                           <label>Vendor:</label>
+                          <select   style="width:30%"   formControlName="Vendor" required>
+                              <option></option>
+                              <option>Shivu</option>
+                              <option>shivu</option>
+                         </select>   
+
+                        
+                           <diV *ngIf="vendorForm.controls['Vendor'].hasError('required')" class="alert alert-danger">
+                            plese select itemType
+                          </diV> 
+                       </div>
+                      <div class= "col-sm-6 col-md-6 col-xs-12"  > 
+                      <label>Date:</label>
+                      <input type="date">
+                      </div>
+                  </div>
+                  
+                  <br>
+
+         <!-- <button type="button" class="btn btn-info">+ ADD ITEMS</button><br> -->
+           <div class="row" > 
+
+                      <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>SI</th>
+                              <th>Item Name</th>
+                              <th>No. Items</th>
+                              <th>Rate</th>
+                              <th>Amount</th>
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td><input type="text" class="txt"></td>
+                              <td><input type="number" class="txt"></td>
+                              <td><input type="number" class="txt"></td>
+                              <td><input type="number" class="txt"></td>
+                            
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="text" class="txt"></td>
+                                <td><input type="number" class="txt"></td>
+                                <td><input type="number" class="txt"></td>
+                                <td><input type="number" class="txt"></td>
+                              
+                              </tr>
+
+                              <tr>
+                                  <td>3</td>
+                                  <td><input type="text" class="txt"></td>
+                                  <td><input type="number" class="txt"></td>
+                                  <td><input type="number" class="txt"></td>
+                                  <td><input type="number" class="txt"></td>
+                                
+                                </tr>
+                          
+                          
+                          </tbody>
+                        </table>
+                         
+                          <div  class="col-sm-12 col-md-12 col-xs-12"> 
+                            <div class="row"> 
+                              <div class= "col-sm-6 col-md-6 col-xs-12">
+                                </div>   
+                              
+                             <div class= "col-sm-6 col-md-6 col-xs-12"  > 
+                               
+                             <label>Subtotal</label>
+                             <input type="number" class="numb"><br>
+                             <hr>
+                             <label>Discounts</label>
+                             <input type="number" class="numb1" formControlName="Discounts" required><br>
+                             <diV *ngIf="vendorForm.controls['Discounts'].hasError('required')" class="alert alert-danger">
+                                plese select itemType
+                              </diV>
+                             <hr>   
+                             
+                             <label>Total:</label>
+                             <input type="number" class="numb2">
+                             </div>
+                          </div>
+                          </div>
+                    </div>
+                    <button  type="sbumit" [disabled]="!vendorForm.valid" class="btn btn-success" style="margin-left:30%">Submit</button>
+                    <a [routerLink] = "['/Purchase']"  >     <button type="button" class="btn btn-danger">Cancel</button></a>
+        </div>
+
+  </div>
+ </form>
+</div>
+</div>

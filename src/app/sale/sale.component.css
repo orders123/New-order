@@ -1,0 +1,7 @@
+.main {
+    margin-left: 180px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+   
+    margin-top:-600px;
+    height:92%;
+}

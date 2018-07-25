@@ -1,0 +1,97 @@
+<div class="main">
+    <div class="container" > 
+
+            <div class="col-sm-12 col-md-12 col-xs-12;margin-left:10px;margin-top:-20px;" > 
+            <strong>Vendor</strong> </div>
+   <form  [formGroup]="vendorForm" (ngSubmit)="onSubmit()">  
+      <div class="row"  style="background:#f4f7f8;height:500px;width:100%;margin-left:10px;overflow-y: auto">
+               
+     <div class= "col-sm-4 col-md-4 col-xs-12" style="width:50%">
+     
+            <div>
+             <label>Name:</label>
+             <input type="text" class="form-control"   formControlName="Name" placeholder="Enter Name" name="Name" required>
+             <diV *ngIf="vendorForm.controls['Name'].hasError('required')" class="alert alert-danger">
+                please enter  name
+              </diV>
+            </div>
+
+           <div>
+            <label>Mobile No :</label>
+            <input type="tel" class="form-control"   formControlName="Mobile"  placeholder="Mobile No" name="Mobile" required>
+            <diV *ngIf="vendorForm.controls['Mobile'].hasError('required')" class="alert alert-danger">
+                please enter  Mobile No
+              </diV>
+          </div>
+
+          <div>
+              <label>Email:</label>
+              <input type="email" class="form-control" formControlName="email"    name="email" required>
+              <diV *ngIf="vendorForm.controls['email'].hasError('required')" class="alert alert-danger">
+                  please enter  email
+                </diV>
+
+          </div>
+        
+         <div>
+            <label>Address:</label>
+            
+            <input type="text" class="form-control"  formControlName="Address" placeholder="Address" name="Address">
+            <diV *ngIf="vendorForm.controls['Address'].hasError('required')" class="alert alert-danger">
+                please enter  Address
+              </diV>
+          </div>
+         
+          <div> 
+             <label>Comapny Name:</label>
+             <input type="text" class="form-control" formControlName="Comapny"  placeholder="Comapny Name" name="Comapny">
+                <diV *ngIf="vendorForm.controls['Comapny'].hasError('required')" class="alert alert-danger">
+                please enter  Address
+              </diV>
+            </div>
+   </div>      
+<div class= "col-sm-8 col-md-8 col-xs-12"> 
+          
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>mobile NO</th>
+            <th>Email</th>
+            <th>Company Name</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>shivanand</td>
+            <td>872222</td>
+            <td>sh@gmail.com</td>
+            <td> Opal</td>
+             
+          </tr>
+          <tr>
+              <td>shivanand</td>
+              <td>872222</td>
+              <td>sh@gmail.com</td>
+              <td> Opal</td>
+               
+            </tr>
+          
+        
+        </tbody> 
+      </table>
+  </div>    
+        <br>
+          
+          
+    <button type="sbumit"  [disabled]="!vendorForm.valid" class="btn btn-success" style="margin-left:35%">Save</button>
+    <button type="button" class="btn btn-primary">Edit</button>
+    <a [routerLink] = "['/Purchase']"  >  <button type="button" class="btn btn-danger">Cancel</button></a>
+    
+    </div>
+      </form>
+ 
+  </div>
+</div>
