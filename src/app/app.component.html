@@ -3,14 +3,26 @@
  
  <div class="container-fluid" style="height:657px">
    
+<<<<<<< HEAD
     <div class="div1">   
        <span Style="text-align: center;color:Black"><strong><i>OPAL Inventory  </i></strong></span>
        <span Style="text-align: center;color:black;margin-left: 70%;"><strong><i> Shivanand </i></strong></span> 
+=======
+    <div class="div1">
+       
+       <span Style="text-align: center;color:Black"><strong><i>OPAL Inventory  </i></strong></span>
+       <span Style="text-align: center;color:black;margin-left: 70%;"><strong><i> Shivanand </i></strong></span>
+       
+  
+    
+      
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
     </div>
   
   <div class="sidenav">
   <a href="#dash"> Dashboard</a>
     <!-- <a  href="#Item" (click)="item()">Item</a> -->
+<<<<<<< HEAD
     <!-- <a [routerLink] = "['/Item']"  >Item</a>   -->
     <a href="#" data-toggle="dropdown" class="dropdown-toggle" >Items</a>
       <ul class="dropdown-menu dropdown" style="background-color:#383838;">
@@ -30,3 +42,31 @@
   </div>
       <router-outlet></router-outlet>
   </div>
+=======
+    <a [routerLink] = "['/Item']"  >Item</a>  
+
+    <a [routerLink] = "['/Sale']">Sales</a>
+    <!-- <a href="#purchases">purchases</a> -->
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle" >Purchase</a>
+    <ul class="dropdown-menu dropdown" style="background-color:#383838;">
+        <li>
+            <a [routerLink] = "['/Vendor']">Vendor</a>
+            <a [routerLink]="['/Purchase']">Purchase History</a>
+            <a [routerLink]="['/NEWPurchase']">NEW purchase</a>
+        </li>
+    </ul>
+
+    <a [routerLink] = "['/Inventory']">Return</a>
+  </div>
+ 
+  
+   
+   
+   
+
+      <router-outlet></router-outlet>
+
+      
+ 
+    </div>
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132

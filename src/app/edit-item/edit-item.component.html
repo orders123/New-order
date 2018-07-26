@@ -1,0 +1,152 @@
+<div class="main">
+
+ 
+    <div class="container"> 
+         <div class="col-sm-12 col-md-12 col-xs-12;margin-left:10px;margin-top:-20px;" > 
+                 <strong>Edit Item</strong> </div>
+                 
+                
+          <div class="row"  style="background:#f4f7f8;height:500px;width:100%;margin-left:10px;overflow-y: auto">
+           
+          <div class= "col-sm-6 col-md-6 col-xs-12">
+                 <div class="row" >
+                         <label>Item Name:&nbsp;&nbsp;</label> 
+                
+                         <input type="text"      class="txt1">
+                </div><br>
+                <div class="row">
+                       <label>Item Type:&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                       <select class="sel"      name="itemType">
+                       <option></option> 
+                       <option  *ngFor="let type of types">{{type.itemType}}</option>
+                      </select> 
+                </div><br> 
+                  
+                <div class="row">
+                    <label>Sku:&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                    <input type="text"   id="txt">
+                     
+               </div><br>
+
+               <div class="row">
+                  <label> Category:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                   <select class="sel"   name="salecagory"     required>
+                   <option></option>
+                   <option *ngFor="let cate of category">{{cate.salecagory}}</option>
+                  </select> 
+                
+             </div><br> 
+              
+             <div class="row">
+                <label>Brand:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text"   id="barnd"     name="Brand"    required >
+                    
+              </div> <br> 
+    
+              <div class="row">
+                  <label> Inv Group:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                  <select class="sel"     name="InvGroup" required >
+                 <option></option>
+                 <option *ngFor="let inv of invgrp">{{inv.InventoryGroupName}}</option>
+                 </select> 
+
+            
+             </div><br>
+    
+  </div>
+    
+  <div class= "col-sm-6 col-md-6 col-xs-12">
+                          
+            <div class= "col-sm-6 col-md-6 col-xs-12" style="height:100px;margin-left:15px;border:1px dotted black">
+                Image  
+       
+            </div> <br>  
+            
+            <label>Description :</label>
+            <div class="row">
+                
+                <input type="text"    style="margin-left:30px"   class="txt1"   name="Desc"    required >
+            </div> <br>
+    
+            <div class="row">
+                <label  style="margin-left:30px">Uom:&nbsp;&nbsp;</label> 
+                <input type="number" name="uom"  class="txt1"   required >
+              
+           </div><br>
+         
+           <div class="row">
+              <label style="margin-left:30px"> Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+              <select class="sel"   name="tax" required >
+                      <option></option>
+                      <option *ngFor="let tx of tax">{{tx.taxName}}</option>
+                      </select> 
+              </div> 
+                       
+              
+  </div>           
+               
+       <button type="sbumit"   class="btn btn-success" style="margin-left:35%" (click)="newMessage()">Save</button> 
+
+       <a [routerLink] = "['/Item']"  >  <button type="button" class="btn btn-danger">Cancel</button></a>                      
+             
+          {{message}}     
+    
+</div>          
+                  
+</div>
+     
+</div>
+  
+                 
+    
+          
+                                     
+            
+           
+            
+                
+    
+           
+                           
+                               
+                    
+    
+         
+                  
+                  
+                    
+    
+    
+                     
+    
+                    
+    
+                   
+                  
+    
+                         
+    
+     
+    
+                         
+                
+          
+           
+    
+      
+    
+     
+   
+      
+      
+      
+         
+    
+    
+      
+   
+  
+      
+      
+     
+    

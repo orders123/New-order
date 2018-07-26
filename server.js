@@ -4,12 +4,25 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 
+<<<<<<< HEAD
 var mongojs=require('mongojs');
 // var db=mongojs('test',['loginDetails1']);
 var db=mongojs('Orders',['itemTypes']);
 
 var db=mongojs('Orders',['salesCategory']);
 var ObjectID = require('mongodb').ObjectID;
+=======
+// var multer = require('multer');
+
+var mongojs=require('mongojs');
+// var db=mongojs('test',['loginDetails1']);
+var db=mongojs('Orders',['itemTypes']);
+"use strict";
+// bodyParser={
+//   json: {limit: '50mb', extended: true},
+//   urlencoded: {limit: '50mb', extended: true}
+// };
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
 
 // db.moduleName.insert({name:'opal'});
 
@@ -29,9 +42,30 @@ app.use(express.static(path.join(__dirname, 'dist')));
 // app.use('/api', api);
 
 
+<<<<<<< HEAD
 app.get('/kkkk',function(req,res){
 	console.log("qqqqqqqqqqqqqqq")
  db.itemType.find(function(err,doc){
+=======
+app.get('/allItems',function(req,res){
+	console.log("oooooooooooooooooooooooooooooooooooo")
+ db.itemData.find(function(err,doc){
+      res.json(doc);
+     console.log(doc) ;
+  })
+})
+
+app.delete('/onedelete:idd',function(req,res){
+  console.log("ddddddddddddddddddddddddddddddddd")
+  // var name=req.body.name
+  // console.log(name)
+  var id=req.params.idd;
+  console.log(id)
+  
+  
+  
+ db.itemData.remove({_id: mongojs.ObjectId(id)},function(err,doc){
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
       res.json(doc);
      console.log(doc) ;
   })
@@ -77,6 +111,7 @@ app.get('/gettax',function(req,res){
 })
 
 
+<<<<<<< HEAD
 app.get('/CategoryDetail',function(req,res){
 
   // console.log("rahul")
@@ -127,6 +162,8 @@ app.get('/inventoryGroupDetails',function(req,res){
   
 // })  
 
+=======
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
 
 // app.post('/api',function(req,res)
 // {
@@ -188,6 +225,10 @@ app.post('/1234',function(req,res)
   var tax=req.body.tax;
   var date=req.body.date;
   var description=req.body.desc;
+<<<<<<< HEAD
+=======
+  var imageUrl=req.body.Urlimage;
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
   
     
 
@@ -217,7 +258,11 @@ app.post('/1234',function(req,res)
      
  
   db.itemData.insert({"discription":description,"date":date,"invGrpId":invid,"itemtypeId":itemtypeid,"itemName":name,"saleCatgoryId":categoryid
+<<<<<<< HEAD
              ,"sku":sku,"brand":brand,"Uom":uom,"tax":tax,"invgrp":invgrp,"category":salcategory,"itemType":type},function(err,doc)
+=======
+             ,"sku":sku,"brand":brand,"Uom":uom,"tax":tax,"invgrp":invgrp,"category":salcategory,"itemType":type,"Image":imageUrl},function(err,doc)
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
         {
         res.json(doc);
         console.log(doc)
@@ -287,6 +332,7 @@ app.get('/getcateid:salecagory',function(req,res){
   
 })  
 
+<<<<<<< HEAD
 
 
 
@@ -333,6 +379,8 @@ db.inventoryGroup.remove({_id: mongojs.ObjectId(edid)},function(err,doc){
 
 
 
+=======
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
     
 //postallIds
 
@@ -375,6 +423,7 @@ db.inventoryGroup.remove({_id: mongojs.ObjectId(edid)},function(err,doc){
         
        
 
+<<<<<<< HEAD
     
       //        app.post(function(req,res)
       //       {
@@ -621,6 +670,11 @@ app.post('/editinventory:invedit',function(req,res){
 
 
 
+=======
+  
+      
+       
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
     
 
   app.get('/getSelType:type',function(req,res){
@@ -645,7 +699,11 @@ app.get('*', (req, res) => {
 /**
  * Get port from environment and store in Express.
  */
+<<<<<<< HEAD
 const port = process.env.PORT || '3000';
+=======
+const port = process.env.PORT || '2000';
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
 app.set('port', port);
 
 /**

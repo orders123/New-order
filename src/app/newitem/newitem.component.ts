@@ -38,6 +38,10 @@ export class NewitemComponent implements OnInit {
    itemTypeId:any;
    typeid:Object={};
    details345:Object={};
+<<<<<<< HEAD
+=======
+   url:any;
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
     //  ,sku,category,brand,invgrp,discription,tax
 
     constructor(private _itemservice: NewitemService,private  http: Http) { }
@@ -52,10 +56,18 @@ export class NewitemComponent implements OnInit {
     InvGroup:new FormControl(" ",Validators.required), 
     uom:new FormControl(" ",Validators.required),
     tax:new FormControl(" ",Validators.required),
+<<<<<<< HEAD
     Desc:new FormControl(" ",Validators.required)
   });
   onSubmit(){
     
+=======
+    Desc:new FormControl(" ",Validators.required),
+    image :new FormControl()
+  });
+  onSubmit(){
+    console.log(this.url)
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
     console.log(this.userForm.value.itemName);
 
    var itemName=this.userForm.value.itemName;
@@ -72,6 +84,11 @@ export class NewitemComponent implements OnInit {
    var desc=this.userForm.value.Desc;
    var uom=this.userForm.value.uom;
    var tax=this.userForm.value.tax;
+<<<<<<< HEAD
+=======
+   var image=this.userForm.value.image
+   var Url=this.url;
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
   //  var description123= this.userForm.value.Description;
    var date = new Date().toLocaleDateString();
 
@@ -85,7 +102,14 @@ export class NewitemComponent implements OnInit {
     uom:uom,
     tax:tax,
      date:date,
+<<<<<<< HEAD
      desc:desc
+=======
+     desc:desc,
+     image:image,
+     Urlimage:Url
+
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
     // description33:description123
 
   }
@@ -152,6 +176,23 @@ export class NewitemComponent implements OnInit {
     // this.userForm.value.itemName="shivu";
    }
   
+<<<<<<< HEAD
+=======
+   name:any;
+   readUrl(event:any) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+  
+      reader.onload = (event:any) => {
+        this.url = event.target.result;
+        this.name =event.target.result.filename;
+        console.log(this.url)
+      }
+  
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  }
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
 
   ngOnInit() {
 

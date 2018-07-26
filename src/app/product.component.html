@@ -1,5 +1,23 @@
+<<<<<<< HEAD
 <div class="main">
 
+=======
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+
+
+<div class="main">
+
+
+
+
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
  
     <div class="container"> 
       <span> Active Items</span>
@@ -9,13 +27,18 @@
       <thead>
         <tr>
           <th>Itemname</th>
+<<<<<<< HEAD
           <th> vijaya</th>
+=======
+          <th>InventoryGroup</th>
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132
           <th>Salecategory</th>
           <th>Item Type</th>
           <th>Edit/Delete</th>
         </tr>
       </thead>
       <tbody>
+<<<<<<< HEAD
         <tr>
           <td>Idli</td>
           <td>SouthFood</td>
@@ -45,3 +68,33 @@
   </div>
   
  
+=======
+          <!-- let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow" -->
+        <tr *ngFor="let items of allItemDetails" >
+          <td>{{items.itemName}}</td>
+          <td>{{items.invgrp}}</td>
+          <td>{{items.category}}</td>
+          <td>{{items.itemType}}</td>
+          <td><a  [routerLink] = "['/Edititem']"><button type="button" class="btn btn-info btn-lg" >
+              <span class="glyphicon glyphicon-pencil" (click)="setClickedRow(items)"> </span>
+          </button></a>
+         
+          <button type="button" class="btn btn-info btn-lg" (click)="deleteRow(items)">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+          
+        
+        </td>
+           
+        </tr>
+        
+        
+        
+      </tbody> 
+    </table>
+    </div>
+    {{message}}
+  </div>
+  
+   
+>>>>>>> 06060b1a0c18b79b36b2ad15de693bbe8e829132

@@ -1,0 +1,24 @@
+.main {
+    margin-left:150px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+   
+    margin-top:-600px;
+    
+}
+
+.txt{
+
+    width:50%;
+    border:none;
+}
+.numb{
+    margin-left: 10%;
+}
+.numb1{
+    margin-left: 8%;
+}
+.numb2{
+    margin-left: 15%;
+}
+
+ 
