@@ -1,0 +1,55 @@
+.main {
+    margin-left:150px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+   
+    margin-top:-600px;
+    
+}
+.sel
+{
+   width: 50%;
+   border-radius: 4px;
+}
+
+.ers{
+
+     color:red;
+     font-size:15px;
+     margin-left:25%;
+}
+ 
+#txt
+{
+     margin-left:57px;
+     width: 50%;
+ }
+ .txt1{
+     width:50%
+ }
+ #barnd{
+    margin-left:38px ;
+    width: 50%;  
+ }
+ #div1{
+     border:1px red solid;
+     width:100px;
+     height:100px;
+     margin-left:700px
+ }
+
+ 
+ .btn{
+     width:100px;
+     height:50px;
+ } 
+
+  input[type="text"],input[type="number"] 
+  
+  {
+    border-radius: 4px;
+ }
+ select 
+  {
+    border-radius: 4px;
+ }
+ 

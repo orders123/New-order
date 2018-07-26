@@ -1,0 +1,152 @@
+
+
+
+<head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      </head> 
+
+ 
+
+
+
+
+
+<div class="main">
+<div class="row">
+
+    
+        <div class="col-sm-8">
+            
+                
+                <div class="panel panel-default">
+
+                
+
+                
+                         <div id="vrbar">
+                     <div id="hrbar">
+                    
+                    <table class="table">
+                       
+                      <thead>
+                            <tr>
+                                <th><span class="text" style="margin-left:-5px" >SalesCategoryNo</span></th>
+                                <th><span class="text" style="margin-left:-10px" >SalesCategoryType</span></th>
+                                <th><span class="text" style="margin-left:-60px" >SortedOrderNo</span></th>
+                      
+                                <th><span class="text" >Edit/Delete</span></th>
+                       </tr>
+
+
+                      </thead>
+
+                 
+                
+             
+             <tbody >
+               <tr  *ngFor ="let cate of resulttypes" >
+               
+                 <td >{{cate.salecategory}}</td>
+                 <td >{{cate.SalesCategoryType}}</td>
+                 <td >{{cate.SortedOrderNo}}</td>
+                 <td> 
+                    <button  (click)="editFun(cate)"  type="button" class="btn btn-info btn-sm" >
+                        <span class="glyphicon glyphicon-edit"></span>  
+                      </button>          
+                          
+                <!-- <a href="#">
+                  <span class="glyphicon glyphicon-trash"  style= "margin-left:20px"></span>
+                </a> -->
+                <button (click)="deleteFun(cate)" type="button" class="btn btn-info btn-sm" >
+                  <span class="glyphicon glyphicon-trash"></span>  
+                </button>          
+                    
+               
+
+              </td>
+               
+               </tr>
+
+                
+            </tbody>
+             
+              </table>
+              </div>
+            </div>
+        </div> 
+       </div>    
+       
+       
+                 <div class="col-md-4">
+                  <form>
+
+
+                    <div class="sale">
+                            
+                       <label for="categoryNo">SalesCategoryNo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input [(ngModel)]="name1" name="name1"       type="text" id="categoryNo"   ><br><br>
+
+                                    <!-- [disabled]="new123==false" -->
+                                 
+                            
+
+
+                             
+                 <label for="categoryType">SalesCategoryType:&nbsp;&nbsp;&nbsp;</label>
+                <input [(ngModel)]="name2" name="name2"     type="text" id="categoryType" ><br><br>
+                            
+
+                  <p>
+                      <label for="orderNo">SortedOrderNo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input [(ngModel)]="name3"  name="name3"   type="text" id="orderNo" >
+                         
+                  </p> 
+                        
+
+                    </div>
+                      
+                 </form>
+
+                 <div class="button1">
+
+                   <button  style= "margin:5px" type="button" class="btn btn-primary">New</button> 
+
+                   <button  (click)="myCategory(name1,name2,name3)"  *ngIf="editCat==false"  style="margin:5px" type="button" class="btn btn-success"  [disabled]="new123==false"  disabled >Save</button>
+                   <button style="margin:5px" type="button" class="btn btn-danger"  *ngIf="editCat!=false" (click)=salUpdate(name1,name2,name3) >Update</button>
+
+                  <button style="margin:5px" type="button" class="btn btn-warning" >Cancel</button>
+                  
+         
+                        <!-- [class.disabled]="isClickedOnce"
+                        (click)="isClickedOnce = true" disabled -->
+                        <!-- [disabled]="new123==false -->
+                 </div>
+         
+
+
+                
+
+
+                 </div>
+                
+                    
+                   
+                   
+                   
+
+
+
+          
+        
+        
+
+
+
+
+</div>
+</div>

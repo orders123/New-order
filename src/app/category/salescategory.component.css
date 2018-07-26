@@ -1,0 +1,67 @@
+.main {
+    margin-left:200px; /* Same as the width of the sidenav */
+    /* font-size: 20px; Increased text to enable scrolling */
+   
+    margin-top:-650px;
+  
+    
+}
+
+
+#hrbar {
+    height:400px;
+    overflow:auto;
+    margin-top:5%;
+  }
+  
+  
+   #vrbar table thead th .text {
+    position:absolute;
+    top:5%;
+  
+    height:0%;
+  
+   }
+
+  
+   
+  
+    /*.col-md-4{
+      margin-top:5%;
+  
+   }*/
+  
+   .col-sm-8{
+     margin-top:5%;
+  
+   }
+  
+  
+   .table{
+  
+     margin-top:0%;
+    
+  
+   } 
+  
+   /* .form-control {
+       width:70%;
+  
+   } */
+  
+   .button1{
+  
+       margin-top:60px;
+         margin-left: 10%;
+  
+   }   
+ 
+   .sale{
+     /* margin-left: 15%; */
+     margin-top:35%;
+  
+   }
+   
+  
+  
+   

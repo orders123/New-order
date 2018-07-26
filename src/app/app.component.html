@@ -1,0 +1,32 @@
+
+ 
+ 
+ <div class="container-fluid" style="height:657px">
+   
+    <div class="div1">   
+       <span Style="text-align: center;color:Black"><strong><i>OPAL Inventory  </i></strong></span>
+       <span Style="text-align: center;color:black;margin-left: 70%;"><strong><i> Shivanand </i></strong></span> 
+    </div>
+  
+  <div class="sidenav">
+  <a href="#dash"> Dashboard</a>
+    <!-- <a  href="#Item" (click)="item()">Item</a> -->
+    <!-- <a [routerLink] = "['/Item']"  >Item</a>   -->
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle" >Items</a>
+      <ul class="dropdown-menu dropdown" style="background-color:#383838;">
+          <li>
+              <a [routerLink] = "['/Active']">Active Items</a>
+              <a [routerLink]="['/SalesCategory']">Sales Category </a>
+              <a [routerLink]="['/InventoryGroup']">Inventory Group</a>
+          </li>
+      </ul>
+
+
+    <a [routerLink] = "['/Sale']">Sales</a> 
+
+     
+    <a href="#purchases">purchases</a>
+    <a [routerLink] = "['/Inventory']">Return</a>
+  </div>
+      <router-outlet></router-outlet>
+  </div>

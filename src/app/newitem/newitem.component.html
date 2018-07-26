@@ -1,0 +1,263 @@
+<div class="main">
+
+ 
+<div class="container" > 
+     <div class="col-sm-12 col-md-12 col-xs-12;margin-left:10px;margin-top:-20px;" > 
+             <strong>New Item</strong> </div>
+             
+             <form   [formGroup]="userForm" (ngSubmit)="onSubmit(itemName)"> 
+      <div class="row"  style="background:#f4f7f8;height:500px;width:100%;margin-left:10px;overflow-y: auto">
+       
+      <div class= "col-sm-6 col-md-6 col-xs-12">
+      
+
+
+
+
+        <!-- <div class="row">
+          <label  style="margin-left:30px">Uom:&nbsp;&nbsp;</label> 
+          <input type="text"    class="txt1" formControlName="itemName" required  [ngValue]="kkkkkkk">
+          <diV *ngIf="userForm.controls['itemName'].hasError('required')" class="alert alert-danger">
+             plese select -uom-
+           </diV>
+     </div><br> -->
+
+        <div class="row" >
+          <label>Item Name:&nbsp;&nbsp;</label> 
+        
+          <input type="text"      class="txt1 form-control"     formControlName="itemName"   required >
+   
+          <diV *ngIf="userForm.controls['itemName'].hasError('required')" class="alert alert-danger">
+            plese enter itemanme
+          </diV>
+      </div><br>
+     
+
+                   
+           <!-- <div class="row" >
+               <label>Item Name:&nbsp;&nbsp;</label> 
+               <input type="text"  name="itemName"  class="txt1 form-control"  [(ngModel)]="selectedItems.itemName" required #itemName="ngModel">
+        
+              
+               <!-- <div *ngIf="formname.itemName.$touched">
+                        <p [hidden]="!formname.itemName.$error.required">itemName  is Required</p>
+                        </div> -->
+           <!-- </div>   --> 
+                  <!-- <div  *ngIf="itemName.errors?.required ">
+                      <p class="ers">Plese enter Itemname</p> 
+                   </div><br> -->
+          
+           
+                               
+         <div class="row">
+               <label>Item Type:&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+               <select class="sel form-control"   formControlName="itemType"  (change)="types(selectedItems.itemType)" name="itemType" required>
+                 <option></option> 
+               <option  *ngFor="let type of resulttypes">{{type.itemType}}</option>
+               </select> 
+
+               <diV *ngIf="userForm.controls['itemType'].hasError('required')" class="alert alert-danger">
+                plese select itemType
+              </diV> 
+        </div> <br> 
+              <!-- <div  *ngIf="itemType.errors?.required ">
+                <p class="ers"> plese select itemType</p> 
+              </div> -->
+
+        <div class="row">
+                <label>Sku:&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                <input type="text"   id="txt" class="form-control"   formControlName="Sku" >
+                <diV *ngIf="userForm.controls['Sku'].hasError('required')" class="alert alert-danger">
+                  plese select itemType
+                </diV> 
+        </div><br>
+              <!-- <div  *ngIf="Sku.errors?.required ">
+                <p class="ers"> plese select Sku</p> 
+              </div><br> -->
+           
+              <!-- <div class="row">
+                <label> Inv Group:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                <select class="sel form-control"  formControlName="InvGroup"  name="InvGroup" required >
+               <option></option>
+               <option *ngFor="let inv of resultinvgrp">{{inv.InventoryGroupName}}</option>
+               </select> 
+
+               <diV *ngIf="userForm.controls['InvGroup'].hasError('required')" class="alert alert-danger">
+                  plese select -InvGroup-
+                </diV>
+           </div><br> -->
+
+              <div class="row">
+                  <label> Category:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                   <select class="sel form-control"   name="salecagory"   formControlName="salecagory" required>
+                   <option></option>
+                   <option *ngFor="let cate of resultcategory">{{cate.salecagory}}</option>
+                  </select> 
+                  <diV *ngIf="userForm.controls['salecagory'].hasError('required')" class="alert alert-danger">
+                      plese select -salecagory-
+                    </diV> 
+         </div><br> 
+
+        <!-- <div class="row">
+                 <label> Category:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                  <select class="sel" [(ngModel)]="selectedItems.salecagory" name="salecagory" required #salecagory="ngModel">
+                  <option></option>
+                  <option *ngFor="let cate of resultcategory">{{cate.salecagory}}</option>
+                 </select> 
+        </div><br>  -->
+              <!-- <div  *ngIf="salecagory.errors?.required ">
+                <p class="ers"> plese select Salecagory</p> 
+              </div><br> -->
+                                 
+        <div class="row">
+            <label>Brand:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text"   id="barnd" class="form-control"   name="Brand"  formControlName="Brand" required >
+                
+            <diV *ngIf="userForm.controls['Brand'].hasError('required')" class="alert alert-danger">
+                plese select -Brand-
+              </diV>
+
+        </div> <br>
+              <!-- <div  *ngIf="Brand.errors?.required ">
+                <p class="ers"> plese select Brand</p> 
+              </div><br> -->
+        
+              <div class="row">
+                  <label> Inv Group:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                  <select class="sel form-control"  formControlName="InvGroup"  name="InvGroup" required >
+                 <option></option>
+                 <option *ngFor="let inv of resultinvgrp">{{inv.InventoryGroupName}}</option>
+                 </select> 
+
+                 <diV *ngIf="userForm.controls['InvGroup'].hasError('required')" class="alert alert-danger">
+                    plese select -InvGroup-
+                  </diV>
+             </div><br>
+
+                                
+        <!-- <div class="row">
+             <label> Inv Group:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+             <select class="sel" [(ngModel)]="selectedItems.InvGroup"  name="InvGroup" required #InvGroup="ngModel">
+            <option></option>
+            <option *ngFor="let inv of resultinvgrp">{{inv.InventoryGroupName}}</option>
+            </select> 
+        </div><br>   -->
+              <!-- <div  *ngIf="InvGroup.errors?.required ">
+                <p class="ers"> plese select InvGroup</p> 
+              </div><br> -->
+                       
+                           
+                
+
+      </div>
+      <div class= "col-sm-6 col-md-6 col-xs-12">
+                   Image  <input type="file">      
+               <div class= "col-sm-6 col-md-6 col-xs-12" style="height:100px;border:1px dotted black;margin-left:15px;">
+                        Image        
+                </div> <br>
+
+
+                 
+
+                <label>Description :</label>
+                    <div class="row">
+                        
+                        <input type="text"    style="margin-left:30px"   class="txt1"   name="Desc"  formControlName="Desc" required >
+                            
+                        <diV *ngIf="userForm.controls['Desc'].hasError('required')" class="alert alert-danger">
+                            plese select -Brand-
+                          </diV>
+            
+                     
+
+                <!-- <div class= "col-sm-6 col-md-6 col-xs-12">
+
+
+                    <div class="row">
+                        <label>Description :</label> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text"       class="txt1"   name="Desc"  formControlName="Desc" required >
+                            
+                        <diV *ngIf="userForm.controls['Desc'].hasError('required')" class="alert alert-danger">
+                            plese select -Brand-
+                          </diV>
+            
+                    </div> -->
+                    <!-- <label>Description :</label>   
+                    <textarea rows="3" cols="20"   name="Description" formControlName="Description" required>
+                                 Description of items
+                   </textarea>
+                   <diV *ngIf="userForm.controls['Description'].hasError('required')" class="alert alert-danger">
+                    plese enter description
+                  </diV> -->
+                   </div> <br> 
+
+               <div class="row">
+                     <label  style="margin-left:30px">Uom:&nbsp;&nbsp;</label> 
+                     <input type="number" name="uom"  class="txt1" formControlName="uom" required >
+                     <diV *ngIf="userForm.controls['uom'].hasError('required')" class="alert alert-danger">
+                        plese select -uom-
+                      </diV>
+                </div><br>
+                <!-- <div  *ngIf="Uom.errors?.required ">
+                        <p class="ers"> plese enter Uom</p> 
+                      </div><br>-->
+   
+                <!-- <div class="row">
+                     <label  style="margin-left:30px">Uom:&nbsp;&nbsp;</label> 
+                     <input type="number" name="uom"  class="txt1" [(ngModel)]="selectedItems.uom" required #Uom="ngModel" >
+                </div><br>  -->
+                <!-- <div  *ngIf="Uom.errors?.required ">
+                        <p class="ers"> plese enter Uom</p> 
+                      </div><br> -->
+
+                      <div class="row">
+                      <label style="margin-left:30px"> Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                      <select class="sel" formControlName="tax" name="tax" required >
+                              <option></option>
+                              <option *ngFor="let tx of resulttax">{{tx.taxName}}</option>
+                              </select> 
+
+                              <diV *ngIf="userForm.controls['tax'].hasError('required')" class="alert alert-danger">
+                                  plese select -tax-
+                                </diV>
+                      </div> 
+
+
+                <!-- <div class="row">
+                <label style="margin-left:30px"> Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+                <select class="sel" [(ngModel)]="selectedItems.tax" name="tax" required #tax="ngModel">
+                        <option></option>
+                        <option *ngFor="let tx of resulttax">{{tx.taxName}}</option>
+                        </select> 
+                </div> -->
+                <!-- <div  *ngIf="tax.errors?.required ">
+                        <p class="ers"> plese select tax</p> 
+                      </div> -->
+
+                     
+            
+      </div>
+       
+
+  
+<button type="sbumit" [disabled]="!userForm.valid" class="btn btn-success" style="margin-left:35%">Save</button>
+ 
+<!-- <button type="button" class="btn btn-success" style="margin-left:35%" 
+(click)="saveitemdetails(selectedItems.itemName,selectedItems.itemType,selectedItems.sku,selectedItems.salecagory,
+selectedItems.Brand,selectedItems.InvGroup,selectedItems.Description,selectedItems.uom,selectedItems.tax)" 
+     ng-disabled="formname.$invalid || isregisterdisabled">Save</button> -->
+  
+  
+  
+     <a [routerLink] = "['/Item']"  >  <button type="button" class="btn btn-danger">Cancel</button></a>
+
+
+  
+</div>
+</form>
+  </div>
+ 
+  </div>
+
+  
+ 
